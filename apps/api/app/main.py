@@ -23,6 +23,7 @@ from .routers import (
     products,
     sales,
     summary,
+    trendyol,
 )
 from .services import llm
 
@@ -83,6 +84,7 @@ ROUTERS = (
     agent,
     export,
     insights,
+    trendyol,
 )
 for r in ROUTERS:
     app.include_router(r.router)

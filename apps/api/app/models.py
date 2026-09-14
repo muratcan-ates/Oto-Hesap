@@ -6,6 +6,7 @@ from datetime import datetime
 from decimal import Decimal
 
 from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, Numeric, Text, func
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
@@ -79,6 +80,25 @@ class PurchaseOrder(Base):
     notify_ref: Mapped[str | None] = mapped_column(Text)  # Telegram message_id / 'dry-run'
     product: Mapped[Product] = relationship()
     supplier: Mapped[Supplier] = relationship()
+
+
+class ExternalOrder(Base):
+    """Pazar yerinden aktarılmış sipariş kalemi (mükerrerlik koruması + denetim izi).
+
+    `external_id` kaynak adıyla birlikte kurulur: ``trendyol:<orderNumber>:<lineId>``. Tekil
+    kısıt DB'dedir (docs/schema.sql); aynı kalem ikinci kez yazılmaya çalışılınca IntegrityError.
+    """
+
+    __tablename__ = "external_orders"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    source: Mapped[str] = mapped_column(Text, nullable=False)  # 'trendyol'
+    external_id: Mapped[str] = mapped_column(Text, nullable=False, unique=True)
+    sale_id: Mapped[int | None] = mapped_column(ForeignKey("sales.id", ondelete="SET NULL"))
+    raw_json: Mapped[dict | None] = mapped_column(JSONB)
+    imported_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+    sale: Mapped[Sale | None] = relationship()
 
 
 class ChatLog(Base):

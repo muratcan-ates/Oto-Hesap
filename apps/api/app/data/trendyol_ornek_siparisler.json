@@ -1,0 +1,927 @@
+{
+  "_aciklama": "SENTETİK ÖRNEK VERİ — gerçek Trendyol yanıtı değildir. TRENDYOL_MODE=mock iken services/trendyol.py bu dosyayı okur. Alan adları resmî Marketplace sipariş servisinin yanıt gövdesinden alındı (developers.trendyol.com, 13 Eyl 2026). Ürün adları data/seed.py kataloğuyla eşleşir; iki kalem bilerek eşleşmez, iki kalem de farklı yazımla (boşluk/büyük harf) yazılmıştır.",
+  "totalElements": 36,
+  "totalPages": 1,
+  "page": 0,
+  "size": 25,
+  "content": [
+    {
+      "shipmentPackageId": 1450000,
+      "orderNumber": "TY-2026-9100",
+      "orderDate": 1784193120000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 288.0,
+      "customerFirstName": "Elif",
+      "customerLastName": "K.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İstanbul",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100000,
+          "quantity": 2,
+          "productName": "USB-C Şarj Kablosu 1 m",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 224.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100001,
+          "quantity": 1,
+          "productName": "Temperli Ekran Koruyucu",
+          "stockCode": "AKS-EKRAN",
+          "barcode": "8690000000181",
+          "lineUnitPrice": 64.0,
+          "lineGrossAmount": 64.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450001,
+      "orderNumber": "TY-2026-9101",
+      "orderDate": 1784468400000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 870.0,
+      "customerFirstName": "Mert",
+      "customerLastName": "A.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Ankara",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100010,
+          "quantity": 1,
+          "productName": "Powerbank 10000 mAh",
+          "stockCode": "PWB-10000",
+          "barcode": "8690000000020",
+          "lineUnitPrice": 870.0,
+          "lineGrossAmount": 870.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450002,
+      "orderNumber": "TY-2026-9102",
+      "orderDate": 1784829900000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 288.0,
+      "customerFirstName": "Zeynep",
+      "customerLastName": "Y.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İzmir",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100020,
+          "quantity": 3,
+          "productName": "Silikon Telefon Kılıfı",
+          "stockCode": "KLF-SLK",
+          "barcode": "8690000000099",
+          "lineUnitPrice": 96.0,
+          "lineGrossAmount": 288.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450003,
+      "orderNumber": "TY-2026-9103",
+      "orderDate": 1785237660000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1197.0,
+      "customerFirstName": "Burak",
+      "customerLastName": "D.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Bursa",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100030,
+          "quantity": 1,
+          "productName": "Bluetooth Kulak İçi Kulaklık",
+          "stockCode": "KLK-BT-TWS",
+          "barcode": "8690000000143",
+          "lineUnitPrice": 1085.0,
+          "lineGrossAmount": 1085.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100031,
+          "quantity": 1,
+          "productName": "USB-C Şarj Kablosu 1 m",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 112.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450004,
+      "orderNumber": "TY-2026-9104",
+      "orderDate": 1785703620000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1705.0,
+      "customerFirstName": "Ayşe",
+      "customerLastName": "T.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Antalya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100040,
+          "quantity": 1,
+          "productName": "Powerbank 20000 mAh",
+          "stockCode": "PWB-20000",
+          "barcode": "8690000000013",
+          "lineUnitPrice": 1705.0,
+          "lineGrossAmount": 1705.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450005,
+      "orderNumber": "TY-2026-9105",
+      "orderDate": 1785918600000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 548.0,
+      "customerFirstName": "Cem",
+      "customerLastName": "Ö.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Konya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100050,
+          "quantity": 1,
+          "productName": "Araç İçi Telefon Tutucu",
+          "stockCode": "AKS-TUTUCU",
+          "barcode": "8690000000174",
+          "lineUnitPrice": 248.0,
+          "lineGrossAmount": 248.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100051,
+          "quantity": 1,
+          "productName": "Araç İçi Şarj Cihazı",
+          "stockCode": "ADP-CAR-36W",
+          "barcode": "8690000000082",
+          "lineUnitPrice": 300.0,
+          "lineGrossAmount": 300.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450006,
+      "orderNumber": "TY-2026-9106",
+      "orderDate": 1786291080000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 640.0,
+      "customerFirstName": "Selin",
+      "customerLastName": "B.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Adana",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100060,
+          "quantity": 1,
+          "productName": "Kablosuz Şarj Standı 15 W",
+          "stockCode": "ADP-WLS-15W",
+          "barcode": "8690000000211",
+          "lineUnitPrice": 640.0,
+          "lineGrossAmount": 640.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450007,
+      "orderNumber": "TY-2026-9107",
+      "orderDate": 1786442580000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 384.0,
+      "customerFirstName": "Onur",
+      "customerLastName": "G.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Gaziantep",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100070,
+          "quantity": 2,
+          "productName": "Şeffaf Darbe Emici Kılıf",
+          "stockCode": "KLF-SFF",
+          "barcode": "8690000000105",
+          "lineUnitPrice": 128.0,
+          "lineGrossAmount": 256.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100071,
+          "quantity": 2,
+          "productName": "Temperli Ekran Koruyucu",
+          "stockCode": "AKS-EKRAN",
+          "barcode": "8690000000181",
+          "lineUnitPrice": 64.0,
+          "lineGrossAmount": 128.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450008,
+      "orderNumber": "TY-2026-9108",
+      "orderDate": 1786745760000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 2175.0,
+      "customerFirstName": "Deniz",
+      "customerLastName": "S.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İstanbul",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100080,
+          "quantity": 1,
+          "productName": "Kablosuz Kulaklık Pro",
+          "stockCode": "KLK-PRO",
+          "barcode": "8690000000136",
+          "lineUnitPrice": 2175.0,
+          "lineGrossAmount": 2175.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450009,
+      "orderNumber": "TY-2026-9109",
+      "orderDate": 1786970640000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 896.0,
+      "customerFirstName": "Ece",
+      "customerLastName": "V.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Ankara",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100090,
+          "quantity": 2,
+          "productName": "Mini Powerbank 5000 mAh",
+          "stockCode": "PWB-5000",
+          "barcode": "8690000000044",
+          "lineUnitPrice": 448.0,
+          "lineGrossAmount": 896.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450010,
+      "orderNumber": "TY-2026-9110",
+      "orderDate": 1787245740000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1127.0,
+      "customerFirstName": "Kaan",
+      "customerLastName": "M.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İzmir",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100100,
+          "quantity": 1,
+          "productName": "65 W GaN Hızlı Şarj Adaptörü",
+          "stockCode": "ADP-GAN-65W",
+          "barcode": "8690000000075",
+          "lineUnitPrice": 1015.0,
+          "lineGrossAmount": 1015.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100101,
+          "quantity": 1,
+          "productName": "USB-C Şarj Kablosu 1 m",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 112.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450011,
+      "orderNumber": "TY-2026-9111",
+      "orderDate": 1787392500000,
+      "status": "Cancelled",
+      "shipmentPackageStatus": "Cancelled",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1820.0,
+      "customerFirstName": "İrem",
+      "customerLastName": "U.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Bursa",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100110,
+          "quantity": 1,
+          "productName": "Oyuncu Kulaklığı RGB",
+          "stockCode": "KLK-RGB",
+          "barcode": "8690000000150",
+          "lineUnitPrice": 1820.0,
+          "lineGrossAmount": 1820.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Cancelled"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450012,
+      "orderNumber": "TY-2026-9112",
+      "orderDate": 1787580120000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 387.5,
+      "customerFirstName": "Barış",
+      "customerLastName": "N.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Antalya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100120,
+          "quantity": 1,
+          "productName": "Deri Cüzdan Kılıf",
+          "stockCode": "KLF-DERI",
+          "barcode": "8690000000112",
+          "lineUnitPrice": 387.5,
+          "lineGrossAmount": 387.5,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450013,
+      "orderNumber": "TY-2026-9113",
+      "orderDate": 1787859180000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 3634.0,
+      "customerFirstName": "Sude",
+      "customerLastName": "R.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Konya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100130,
+          "quantity": 2,
+          "productName": "Powerbank 20000 mAh",
+          "stockCode": "PWB-20000",
+          "barcode": "8690000000013",
+          "lineUnitPrice": 1705.0,
+          "lineGrossAmount": 3410.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100131,
+          "quantity": 2,
+          "productName": "USB-C Şarj Kablosu 1 m",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 224.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450014,
+      "orderNumber": "TY-2026-9114",
+      "orderDate": 1788004080000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1400.0,
+      "customerFirstName": "Emre",
+      "customerLastName": "L.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Adana",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100140,
+          "quantity": 1,
+          "productName": "Mini Bluetooth Hoparlör",
+          "stockCode": "AKS-HOPARLOR",
+          "barcode": "8690000000204",
+          "lineUnitPrice": 1400.0,
+          "lineGrossAmount": 1400.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450015,
+      "orderNumber": "TY-2026-9115",
+      "orderDate": 1788257520000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1414.0,
+      "customerFirstName": "Elif",
+      "customerLastName": "K.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Gaziantep",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100150,
+          "quantity": 1,
+          "productName": "Spor Kulaklık Su Geçirmez",
+          "stockCode": "KLK-SPOR",
+          "barcode": "8690000000167",
+          "lineUnitPrice": 1350.0,
+          "lineGrossAmount": 1350.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100151,
+          "quantity": 1,
+          "productName": "Temperli Ekran Koruyucu",
+          "stockCode": "AKS-EKRAN",
+          "barcode": "8690000000181",
+          "lineUnitPrice": 64.0,
+          "lineGrossAmount": 64.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450016,
+      "orderNumber": "TY-2026-9116",
+      "orderDate": 1788452820000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 837.0,
+      "customerFirstName": "Mert",
+      "customerLastName": "A.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İstanbul",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100160,
+          "quantity": 1,
+          "productName": "Alüminyum Laptop Standı",
+          "stockCode": "AKS-STAND",
+          "barcode": "8690000000198",
+          "lineUnitPrice": 725.0,
+          "lineGrossAmount": 725.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        },
+        {
+          "lineId": 7100161,
+          "quantity": 1,
+          "productName": " usb-c şarj kablosu 1 M ",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 112.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450017,
+      "orderNumber": "TY-2026-9117",
+      "orderDate": 1788597660000,
+      "status": "Delivered",
+      "shipmentPackageStatus": "Delivered",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 450.0,
+      "customerFirstName": "Zeynep",
+      "customerLastName": "Y.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Ankara",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100170,
+          "quantity": 1,
+          "productName": "Tablet Kılıfı 10 inç",
+          "stockCode": "KLF-TBL-10",
+          "barcode": "8690000000129",
+          "lineUnitPrice": 450.0,
+          "lineGrossAmount": 450.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Delivered"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450018,
+      "orderNumber": "TY-2026-9118",
+      "orderDate": 1788729540000,
+      "status": "Shipped",
+      "shipmentPackageStatus": "Shipped",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1705.0,
+      "customerFirstName": "Burak",
+      "customerLastName": "D.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İzmir",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100180,
+          "quantity": 1,
+          "productName": "POWERBANK 20000  MAH",
+          "stockCode": "PWB-20000",
+          "barcode": "8690000000013",
+          "lineUnitPrice": 1705.0,
+          "lineGrossAmount": 1705.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Shipped"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450019,
+      "orderNumber": "TY-2026-9119",
+      "orderDate": 1788872820000,
+      "status": "Shipped",
+      "shipmentPackageStatus": "Shipped",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 468.0,
+      "customerFirstName": "Ayşe",
+      "customerLastName": "T.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Bursa",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100190,
+          "quantity": 2,
+          "productName": "Lightning Kablo 2 m",
+          "stockCode": "KBL-LTN-2M",
+          "barcode": "8690000000068",
+          "lineUnitPrice": 186.0,
+          "lineGrossAmount": 372.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Shipped"
+        },
+        {
+          "lineId": 7100191,
+          "quantity": 1,
+          "productName": "Silikon Telefon Kılıfı",
+          "stockCode": "KLF-SLK",
+          "barcode": "8690000000099",
+          "lineUnitPrice": 96.0,
+          "lineGrossAmount": 96.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Shipped"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450020,
+      "orderNumber": "TY-2026-9120",
+      "orderDate": 1788979920000,
+      "status": "Shipped",
+      "shipmentPackageStatus": "Shipped",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 267.0,
+      "customerFirstName": "Cem",
+      "customerLastName": "Ö.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Antalya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100200,
+          "quantity": 3,
+          "productName": "Type-C OTG Adaptörü",
+          "stockCode": "AKS-OTG",
+          "barcode": "8690000000228",
+          "lineUnitPrice": 89.0,
+          "lineGrossAmount": 267.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Shipped"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450021,
+      "orderNumber": "TY-2026-9121",
+      "orderDate": 1789032360000,
+      "status": "Invoiced",
+      "shipmentPackageStatus": "Invoiced",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1890.0,
+      "customerFirstName": "Selin",
+      "customerLastName": "B.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Konya",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100210,
+          "quantity": 1,
+          "productName": "Kablosuz Şarjlı Powerbank",
+          "stockCode": "PWB-WL-10K",
+          "barcode": "8690000000037",
+          "lineUnitPrice": 1890.0,
+          "lineGrossAmount": 1890.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Invoiced"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450022,
+      "orderNumber": "TY-2026-9122",
+      "orderDate": 1789157040000,
+      "status": "Invoiced",
+      "shipmentPackageStatus": "Invoiced",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 2170.0,
+      "customerFirstName": "Onur",
+      "customerLastName": "G.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Adana",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100220,
+          "quantity": 2,
+          "productName": "Bluetooth Kulak İçi Kulaklık",
+          "stockCode": "KLK-BT-TWS",
+          "barcode": "8690000000143",
+          "lineUnitPrice": 1085.0,
+          "lineGrossAmount": 2170.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Invoiced"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450023,
+      "orderNumber": "TY-2026-9123",
+      "orderDate": 1789212900000,
+      "status": "Picking",
+      "shipmentPackageStatus": "Picking",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 1897.0,
+      "customerFirstName": "Deniz",
+      "customerLastName": "S.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "Gaziantep",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100230,
+          "quantity": 1,
+          "productName": "Powerbank 20000 mAh",
+          "stockCode": "PWB-20000",
+          "barcode": "8690000000013",
+          "lineUnitPrice": 1705.0,
+          "lineGrossAmount": 1705.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Picking"
+        },
+        {
+          "lineId": 7100231,
+          "quantity": 3,
+          "productName": "Temperli Ekran Koruyucu",
+          "stockCode": "AKS-EKRAN",
+          "barcode": "8690000000181",
+          "lineUnitPrice": 64.0,
+          "lineGrossAmount": 192.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Picking"
+        }
+      ]
+    },
+    {
+      "shipmentPackageId": 1450024,
+      "orderNumber": "TY-2026-9124",
+      "orderDate": 1789255080000,
+      "status": "Created",
+      "shipmentPackageStatus": "Created",
+      "currencyCode": "TRY",
+      "packageTotalPrice": 696.0,
+      "customerFirstName": "Ece",
+      "customerLastName": "V.",
+      "cargoProviderName": "Trendyol Express",
+      "shipmentAddress": {
+        "city": "İstanbul",
+        "countryCode": "TR"
+      },
+      "lines": [
+        {
+          "lineId": 7100240,
+          "quantity": 4,
+          "productName": "USB-C Şarj Kablosu 1 m",
+          "stockCode": "KBL-USBC-1M",
+          "barcode": "8690000000051",
+          "lineUnitPrice": 112.0,
+          "lineGrossAmount": 448.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Created"
+        },
+        {
+          "lineId": 7100241,
+          "quantity": 1,
+          "productName": "Araç İçi Telefon Tutucu",
+          "stockCode": "AKS-TUTUCU",
+          "barcode": "8690000000174",
+          "lineUnitPrice": 248.0,
+          "lineGrossAmount": 248.0,
+          "lineTotalDiscount": 0.0,
+          "vatRate": 20,
+          "currencyCode": "TRY",
+          "orderLineItemStatusName": "Created"
+        }
+      ]
+    }
+  ]
+}

@@ -34,6 +34,15 @@ class Settings(BaseSettings):
     notify_dry_run: bool = False  # True: mesaj gönderilmez, loglanır
     business_name: str = "OtoHesap Demo Mağaza"
 
+    # Trendyol pazar yeri — salt-okur sipariş importu (yol haritası prototipi, D11: yalnız V2)
+    # mock: apps/api/app/data/trendyol_ornek_siparisler.json okunur, ağa çıkılmaz (varsayılan)
+    # live: gerçek uca gidilir; üç anahtar da dolu değilse açık hata verilir
+    trendyol_mode: str = Field(default="mock", pattern="^(mock|live)$")
+    trendyol_supplier_id: str | None = None  # satıcı panelindeki Satıcı ID (sellerId)
+    trendyol_api_key: str | None = None
+    trendyol_api_secret: str | None = None
+    trendyol_base_url: str = "https://apigw.trendyol.com/integration"
+
     # web
     cors_origins: str = "http://localhost:3000"
     log_level: str = "INFO"

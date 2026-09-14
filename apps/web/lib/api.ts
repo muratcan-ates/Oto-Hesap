@@ -27,6 +27,9 @@ import type {
   SaleInput,
   SalesByProduct,
   Summary,
+  TrendyolStatus,
+  TrendyolSyncInput,
+  TrendyolSyncResult,
 } from "./types";
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/+$/, "");
@@ -159,6 +162,12 @@ export const approveOrder = (id: number) =>
   request<ApproveResult>(`/api/orders/${id}/approve`, { method: "POST" }, () => mock.approveOrder(id));
 export const rejectOrder = (id: number) =>
   request<RejectResult>(`/api/orders/${id}/reject`, { method: "POST" }, () => mock.rejectOrder(id));
+
+// --- Trendyol pazar yeri (salt-okur sipariş importu; yol haritası prototipi) ---
+export const getTrendyolStatus = () =>
+  request<TrendyolStatus>("/api/integrations/trendyol/status", undefined, mock.getTrendyolStatus);
+export const syncTrendyol = (input: TrendyolSyncInput = {}) =>
+  request<TrendyolSyncResult>("/api/integrations/trendyol/sync", json(input), () => mock.syncTrendyol());
 
 // --- dışa aktarma (tarayıcı doğrudan indirir) ---
 export const exportUrl = (kind: "sales" | "expenses") => `${API_URL}/api/export/${kind}.csv`;

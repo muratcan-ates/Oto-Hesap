@@ -32,6 +32,7 @@ os.environ["LLM_PROVIDER"] = "fake"
 os.environ["AGENT_SCHEDULER_ENABLED"] = "false"
 os.environ["NOTIFY_DRY_RUN"] = "true"
 os.environ.setdefault("TELEGRAM_BOT_TOKEN", "")
+os.environ["TRENDYOL_MODE"] = "mock"  # testler asla ağa çıkmaz
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -58,7 +59,8 @@ def db():
     with engine.begin() as conn:
         conn.execute(
             text(
-                "TRUNCATE sales, expenses, purchase_orders, chat_log, products, suppliers "
+                "TRUNCATE sales, expenses, purchase_orders, chat_log, external_orders, "
+                "products, suppliers "
                 "RESTART IDENTITY CASCADE"
             )
         )

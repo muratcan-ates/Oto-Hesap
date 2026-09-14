@@ -60,6 +60,22 @@ ALTER TABLE purchase_orders ADD COLUMN IF NOT EXISTS notify_ref TEXT;
 CREATE UNIQUE INDEX IF NOT EXISTS ux_open_order_per_product
   ON purchase_orders (product_id) WHERE status IN ('draft', 'approved', 'sent');
 
+-- Dış kaynaktan (pazar yeri) aktarılan sipariş kalemleri — mükerrerlik koruması.
+-- `external_id` kaynağıyla birlikte adlandırılır: 'trendyol:<orderNumber>:<lineId>'. Tekil indeks
+-- aynı kalemin iki kez `sales`'e yazılmasını DB düzeyinde engeller (çift tık, çift zamanlayıcı).
+-- `sale_id` NULL olabilir: satış silinse bile aktarım izi kalır (yeniden import etmeyiz).
+-- feat/trendyol-adapter dalında eklendi; `sales` tablosuna dokunulmadı.
+CREATE TABLE IF NOT EXISTS external_orders (
+  id          SERIAL PRIMARY KEY,
+  source      TEXT NOT NULL,                 -- 'trendyol'
+  external_id TEXT NOT NULL UNIQUE,          -- 'trendyol:TY-2026-9100:7100000'
+  sale_id     INT REFERENCES sales(id) ON DELETE SET NULL,
+  raw_json    JSONB,                         -- kaynağın kalem gövdesi (denetim izi)
+  imported_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS ix_external_orders_source ON external_orders (source, imported_at DESC);
+
 CREATE TABLE IF NOT EXISTS chat_log (
   id       SERIAL PRIMARY KEY,
   asked_at TIMESTAMPTZ NOT NULL DEFAULT now(),

@@ -176,6 +176,42 @@ export interface RejectResult {
   order?: Order;
 }
 
+// --- Trendyol pazar yeri entegrasyonu (yol haritası prototipi) ---
+// Uçlar: POST /api/integrations/trendyol/sync · GET /api/integrations/trendyol/status
+
+export type TrendyolMode = "mock" | "live";
+
+/** `skipped[].reason` kodları; Ayarlar ekranı bunları Türkçe metne çevirir. */
+export type TrendyolSkipReason = "urun_eslesmedi" | "mukerrer" | "iptal_edilmis" | "gecersiz_kalem";
+
+export interface TrendyolStatus {
+  mode: TrendyolMode;
+  configured: boolean; // canlı çağrı için satıcı bilgileri tam mı
+  last_sync: string | null;
+  imported_total: number;
+}
+
+export interface TrendyolSkipped {
+  reason: TrendyolSkipReason | string;
+  external_id: string;
+  detail?: string | null; // ürün adı ya da sipariş numarası
+}
+
+export interface TrendyolSyncResult {
+  mode: TrendyolMode;
+  fetched: number; // okunan sipariş (paket) sayısı
+  fetched_lines: number; // okunan kalem sayısı
+  imported: number; // `sales`'e yazılan yeni satır
+  skipped: TrendyolSkipped[];
+  since: string;
+  until: string;
+}
+
+export interface TrendyolSyncInput {
+  since?: string;
+  until?: string;
+}
+
 export type InsightSeverity = "info" | "warn" | "warning" | "critical";
 
 /** GET /api/insights — spec ekleme R-24 (AGENTS §6'da henüz yok). */
