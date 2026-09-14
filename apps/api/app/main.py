@@ -18,6 +18,7 @@ from .routers import (
     assistant,
     expenses,
     export,
+    import_,
     insights,
     orders,
     products,
@@ -83,6 +84,7 @@ ROUTERS = (
     agent,
     export,
     insights,
+    import_,
 )
 for r in ROUTERS:
     app.include_router(r.router)

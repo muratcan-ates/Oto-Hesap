@@ -14,6 +14,9 @@ import type {
   ExpenseByCategory,
   ExpenseInput,
   Health,
+  ImportKind,
+  ImportPreview,
+  ImportResult,
   Insight,
   ListParams,
   Order,
@@ -162,3 +165,39 @@ export const rejectOrder = (id: number) =>
 
 // --- dışa aktarma (tarayıcı doğrudan indirir) ---
 export const exportUrl = (kind: "sales" | "expenses") => `${API_URL}/api/export/${kind}.csv`;
+
+// --- CSV içe aktarma ---
+// Mock'a DÜŞMEZ: gerçekten yazan bir işlem, API kapalıyken taklit edilmesi yanıltıcı olur.
+
+const OFFLINE = "API'ye ulaşılamadı; içe aktarma için API çalışıyor olmalı.";
+
+async function send<T>(path: string, init: RequestInit): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(`${API_URL}${path}`, { ...init, headers: { Accept: "application/json", ...(init.headers ?? {}) } });
+  } catch {
+    throw new ApiError(0, OFFLINE);
+  }
+  if (!res.ok) throw new ApiError(res.status, await readDetail(res));
+  return (await res.json()) as T;
+}
+
+/** Dosyayı kaydetmeden ayrıştırır: ilk 20 satır, sütun eşlemesi, hatalar ve 10 dk geçerli token. */
+export function importPreview(kind: ImportKind, file: File): Promise<ImportPreview> {
+  const form = new FormData();
+  form.append("file", file);
+  form.append("kind", kind);
+  // Content-Type'ı tarayıcı yazar (boundary gerekiyor); elle eklenmez.
+  return send<ImportPreview>("/api/import/preview", { method: "POST", body: form });
+}
+
+/** Önizlemedeki geçerli satırları tek transaction'da yazar. `dryRun` token'ı tüketmez. */
+export function importCommit(token: string, dryRun = false): Promise<ImportResult> {
+  return send<ImportResult>("/api/import/commit", {
+    method: "POST",
+    body: JSON.stringify({ token, dry_run: dryRun }),
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+export const importTemplateUrl = (kind: ImportKind) => `${API_URL}/api/import/template/${kind}.csv`;

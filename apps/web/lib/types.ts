@@ -188,3 +188,56 @@ export interface Insight {
   metric?: string;
   change_pct?: number | null;
 }
+
+// --- CSV içe aktarma (specs/002-csv-import) ---
+
+export type ImportKind = "sales" | "expenses";
+
+export interface ImportRowError {
+  row: number; // dosyadaki satır numarası (başlık = 1)
+  field: string | null; // hedef alan adı; dosya geneli hatada null
+  message: string;
+}
+
+export interface ImportPreviewRow {
+  row: number;
+  ok: boolean;
+  values: Record<string, string>; // hedef alan -> ekrana yazılacak metin
+  error: string | null;
+}
+
+export interface ImportPreview {
+  kind: ImportKind;
+  total_rows: number;
+  valid_rows: number;
+  mapping: Record<string, string>; // hedef alan -> kaynak sütun başlığı
+  preview: ImportPreviewRow[];
+  errors: ImportRowError[];
+  warnings: string[];
+  token: string; // 10 dk geçerli, tek kullanımlık
+  filename: string;
+  note: string; // satışta: içe aktarım stoğu düşürmez
+}
+
+export interface ImportResult {
+  kind: ImportKind;
+  inserted: number;
+  skipped: number;
+  errors: ImportRowError[];
+  dry_run: boolean;
+}
+
+/** Önizleme tablosu ve hata listesi için Türkçe alan adları. */
+export const IMPORT_FIELD_LABELS: Record<string, string> = {
+  sold_at: "Tarih",
+  product: "Ürün",
+  qty: "Adet",
+  unit_price: "Birim fiyat",
+  total: "Toplam",
+  channel: "Kanal",
+  spent_at: "Tarih",
+  category: "Kategori",
+  amount: "Tutar",
+  vendor: "Tedarikçi",
+  note: "Not",
+};

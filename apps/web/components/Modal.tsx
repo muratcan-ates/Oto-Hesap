@@ -9,8 +9,14 @@ interface ModalProps {
   onClose: () => void;
   children: ReactNode;
   footer?: ReactNode;
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
 }
+
+const SIZES = {
+  sm: "w-[min(92vw,26rem)]",
+  md: "w-[min(92vw,34rem)]",
+  lg: "w-[min(96vw,54rem)]",
+} as const;
 
 /** Native <dialog> üzerine ince bir katman: Esc ve arka plan tıklaması kapatır. */
 export function Modal({ open, title, onClose, children, footer, size = "md" }: ModalProps) {
@@ -34,9 +40,7 @@ export function Modal({ open, title, onClose, children, footer, size = "md" }: M
         if (e.target === e.currentTarget) onClose();
       }}
       aria-labelledby="modal-title"
-      className={`m-auto max-h-[90dvh] overflow-auto rounded-card border border-line bg-surface p-0 text-ink shadow-none ${
-        size === "sm" ? "w-[min(92vw,26rem)]" : "w-[min(92vw,34rem)]"
-      }`}
+      className={`m-auto max-h-[90dvh] overflow-auto rounded-card border border-line bg-surface p-0 text-ink shadow-none ${SIZES[size]}`}
     >
       <div className="flex items-center justify-between gap-3 border-b border-line px-5 py-3.5">
         <h2 id="modal-title" className="text-[15.5px] font-semibold text-navy">

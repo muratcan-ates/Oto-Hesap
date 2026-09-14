@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { Badge } from "../Badge";
 import { DataTable, type Column } from "../DataTable";
-import { IconDownload, IconEdit, IconPlus, IconSearch, IconTrash } from "../Icons";
+import { IconDownload, IconEdit, IconPlus, IconSearch, IconTrash, IconUpload } from "../Icons";
+import { ImportDialog } from "../ImportDialog";
 import { Modal } from "../Modal";
 import { Toast, type ToastData } from "../Toast";
 import { Button, Card, Field, Input, Notice, Select, Textarea } from "../ui";
@@ -60,6 +61,8 @@ function Pagination({ offset, total, onChange }: { offset: number; total: number
 export function RecordsView() {
   const [tab, setTab] = useState<Tab>("sales");
   const [toast, setToast] = useState<ToastData | null>(null);
+  const [importing, setImporting] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
   const notify = useCallback((text: string, tone: ToastData["tone"] = "success") => setToast({ id: Date.now(), text, tone }), []);
   const closeToast = useCallback((id: number) => setToast((t) => (t?.id === id ? null : t)), []);
 
@@ -85,16 +88,32 @@ export function RecordsView() {
             </button>
           ))}
         </div>
-        <a
-          href={exportUrl(tab)}
-          className="inline-flex h-9 items-center gap-2 rounded-lg border border-line bg-surface px-3 text-[13px] font-medium text-navy hover:bg-mint"
-        >
-          <IconDownload size={16} />
-          Dışa aktar (CSV)
-        </a>
+        <div className="flex flex-wrap items-center gap-2">
+          <Button size="sm" className="h-9" icon={<IconUpload size={16} />} onClick={() => setImporting(true)}>
+            İçe aktar (CSV)
+          </Button>
+          <a
+            href={exportUrl(tab)}
+            className="inline-flex h-9 items-center gap-2 rounded-lg border border-line bg-surface px-3 text-[13px] font-medium text-navy hover:bg-mint"
+          >
+            <IconDownload size={16} />
+            Dışa aktar (CSV)
+          </a>
+        </div>
       </div>
 
-      {tab === "sales" ? <SalesPanel notify={notify} /> : <ExpensesPanel notify={notify} />}
+      {tab === "sales" ? <SalesPanel key={`sales-${refreshKey}`} notify={notify} /> : <ExpensesPanel key={`expenses-${refreshKey}`} notify={notify} />}
+
+      <ImportDialog
+        open={importing}
+        kind={tab}
+        onClose={() => setImporting(false)}
+        onImported={(result) => {
+          setRefreshKey((k) => k + 1);
+          const skipped = result.skipped > 0 ? ` · ${result.skipped} satır atlandı` : "";
+          notify(`${result.inserted} kayıt içe aktarıldı${skipped}.`, result.inserted > 0 ? "success" : "info");
+        }}
+      />
       <Toast toast={toast} onClose={closeToast} />
     </div>
   );
